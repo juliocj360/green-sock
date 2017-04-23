@@ -1,5 +1,28 @@
+body {
+  background-color: navy
+}
+
 img {
   position: relative;
   width: 100px;
   height: 100px;
+}
+
+.box {
+  width: 600px;
+  height: 150px;
+  background-color: white;
+  padding: 10px;
+  border-radius: 20px;
+  margin: auto;
+  margin-bottom: 10px;
+}
+
+button {
+  float: right;
+  color: white;
+  background-color: black;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
 }
