@@ -27,30 +27,24 @@ const buttonThreeAdder = () => {
   })
 }
 
-const pauser = (button, tween) => {
-  console.log('poop4')
-  button.textContent = 'pause'
-  const test2 = () => {
-    console.log('poop5')
-    button.removeEventListener('click', test2)
-    tween.pause()
-    resumer(button, tween)
-  }
-  button.addEventListener('click', test2)
+const animationFourLoader = () => {
+  const animateButton = document.getElementById('animation4')
+  const pauseButton = document.getElementById('pause')
+  const resumeButton = document.getElementById('resume')
+  const restartButton = document.getElementById('restart')
+  let tween
+
+  animateButton.addEventListener('click', () => {
+    tween = TweenMax.to("#face4", 6, {left:"400px", ease:Linear.easeNone})
+    tween.play()
+  })
+
+  pauseButton.addEventListener('click', () => tween.pause())
+  resumeButton.addEventListener('click', () => tween.resume())
+  restartButton.addEventListener('click', () => tween.restart())
 }
 
-const resumer = (button, tween) => {
-  console.log('poop6')
-  button.textContent = 'resume'
-  const test3 = () => {
-    console.log('poop7')
-    button.removeEventListener('click', test3)
-    tween.resume()
-    pauser(button, tween)
-  }
-  button.addEventListener('click', test3)
-}
-
+animationFourLoader()
 buttonThreeAdder()
 buttonTwoAdder()
 buttonOneAdder()
