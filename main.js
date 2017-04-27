@@ -31,17 +31,19 @@ const animationFourLoader = () => {
   const animateButton = document.getElementById('animation4')
   const pauseButton = document.getElementById('pause')
   const resumeButton = document.getElementById('resume')
-  const restartButton = document.getElementById('restart')
+  const resetButton = document.getElementById('reset')
   let tween
 
   animateButton.addEventListener('click', () => {
-    tween = TweenMax.to("#face4", 6, {left:"400px", ease:Linear.easeNone})
+    tween = TweenMax.to("#face4", 6, {left:"400px", rotationX:360})
     tween.play()
   })
 
   pauseButton.addEventListener('click', () => tween.pause())
   resumeButton.addEventListener('click', () => tween.resume())
-  restartButton.addEventListener('click', () => tween.restart())
+  resetButton.addEventListener('click', () => {
+    TweenMax.to("#face4", .3, {left:0, rotationX:0})
+  })
 }
 
 animationFourLoader()
