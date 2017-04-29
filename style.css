@@ -45,3 +45,12 @@ button {
 .control-box {
   float: right;
 }
+
+.greeting {
+  font-size: 20px;
+  color: white;
+}
+
+#animate5 {
+  text-align: center;
+}

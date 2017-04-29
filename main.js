@@ -46,6 +46,19 @@ const animationFourLoader = () => {
   })
 }
 
+const animationFiveLoader = () => {
+  const buttonFive = document.getElementById('button5')
+  buttonFive.addEventListener('click', () => {
+    TweenMax.to("#animate5", 2, {backgroundColor: 'rgb(88, 97, 112)', borderWidth: 3, borderColor: 'rgb(34, 193, 45)', borderStyle: 'solid', borderRadius: 0, onComplete: () => {
+          TweenMax.to("#animate5", .3, {backgroundColor: 'white', borderWidth: 0, borderColor: 'black', borderStyle: 'none', borderRadius: '10px', delay: 1})
+    }})
+    TweenMax.to("#button5", 2, {backgroundColor: 'white', color: 'black', borderRadius: 0, onComplete: () => {
+      TweenMax.to("#button5", .3, {backgroundColor: 'black', color: 'white', borderRadius: '10px', delay: 1})
+    }})
+  })
+}
+
+animationFiveLoader()
 animationFourLoader()
 buttonThreeAdder()
 buttonTwoAdder()
