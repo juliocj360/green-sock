@@ -58,6 +58,10 @@ const animationFiveLoader = () => {
   })
 }
 
+const tester = document.getElementById('test')
+console.log(window)
+//console.log("x", tester.scrollX)
+
 animationFiveLoader()
 animationFourLoader()
 buttonThreeAdder()

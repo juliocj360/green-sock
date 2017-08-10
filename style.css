@@ -28,6 +28,7 @@ button {
   width: 60px;
   height: 25px;
   font-size: 12px;
+  overflow: hidden;
 }
 
 #face2 {
@@ -53,4 +54,67 @@ button {
 
 #animate5 {
   text-align: center;
+}
+
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+.horizontal-scroll-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.long-image {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  height: 100%;
+  width: auto;
+}
+
+.hvr-icon-forward {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(10px) translateZ(0);
+  transform: perspective(10px) translateZ(0);
+  box-shadow: 0 0 1px transparent;
+  position: relative;
+  padding-right: 2.2em;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+.hvr-icon-forward:before {
+  content: "\f061";
+  position: absolute;
+  right: 1em;
+  top: 6px;
+  padding: 0 1px;
+  font-family: FontAwesome;
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+.hvr-icon-forward:hover:before, .hvr-icon-forward:focus:before, .hvr-icon-forward:active:before {
+  -webkit-transform: translateX(40px);
+  transform: translateX(40px);
+}
+
+#special {
+  float: right;
+  color: white;
+  background-color: black;
+  border: 0;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 60px;
+  height: 25px;
+  font-size: 12px;
+  overflow: hidden;
 }
