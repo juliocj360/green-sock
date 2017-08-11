@@ -37,8 +37,12 @@
       <button type="button" id="button5" name="animate">animate</button>
     </div>
     <div class="box" id="animate6">
-      <a href="#" class="hvr-icon-forward">hello</a>
-      <button type="button" name="button" class="hvr-icon-forward" id="special"></button>
+      <div class="yellow-button" onmouseover="slideIn()" onfocus="slideIn()" onmouseleave="slideOut()" onblur="slideOut()" onmousedown="slideOut()" onmouseup="slideIn()">
+        <span class="search-text" style="color: black">Search</span>
+        <span class="search-arw" id="arrow-right">
+          <i class="fa fa-arrow-right" aria-hidden="true" style="color: black"></i>
+       </span>
+      </div>
     </div>
   </body>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
