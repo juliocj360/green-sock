@@ -28,6 +28,7 @@ button {
   width: 60px;
   height: 25px;
   font-size: 12px;
+  overflow: hidden;
 }
 
 #face2 {
@@ -53,4 +54,72 @@ button {
 
 #animate5 {
   text-align: center;
+}
+
+::-webkit-scrollbar{width:2px;height:2px;}
+::-webkit-scrollbar-button{width:2px;height:2px;}
+.horizontal-scroll-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  height: 100%;
+}
+
+.long-image {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1;
+  vertical-align: top;
+  height: 100%;
+  width: auto;
+}
+
+.yellow-button {
+  background-color: yellow;
+  color: black;
+  width: 250px;
+  height: 50px;
+  overflow: hidden;
+  position: relative;
+  left: 50%;
+  margin-left: -125px;
+  cursor: pointer;
+  text-align: center;
+}
+
+.search-arw {
+  position: absolute;
+  left: 300px;
+  padding-top: 14px;
+}
+
+.slide-in {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transform: translateX(-100px);
+  transform: translateX(-100px);
+}
+
+.slide-out {
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+  -webkit-transform: translateX(0px);
+  transform: translateX(0px);
+}
+.search-text {
+  position: absolute;
+  margin-left: -21px;
+  padding-top: 14px;
+}
+
+.shadow {
+  box-shadow: 1px;
 }

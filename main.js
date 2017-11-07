@@ -58,6 +58,23 @@ const animationFiveLoader = () => {
   })
 }
 
+const slideIn = () => {
+  const el = document.getElementById('arrow-right')
+  el.className = 'search-arw slide-in'
+}
+
+const slideOut = () => {
+  const el = document.getElementById('arrow-right')
+  el.className = 'search-arw slide-out'
+}
+
+const shadow = () => {
+  const el = document.getElementById('arrow-right')
+  el.className = 'search-arw slide-in shadow'
+}
+
+const tester = document.getElementById('test')
+
 animationFiveLoader()
 animationFourLoader()
 buttonThreeAdder()
